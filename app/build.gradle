@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Cucumber JVM (JUnit 4)
+    implementation 'io.cucumber:cucumber-java:7.14.1'
+    testImplementation 'io.cucumber:cucumber-junit:7.14.1'
+    testImplementation 'junit:junit:4.13.2'
+
+    // Selenium
+    implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
+
+    // WebDriverManager
+    implementation 'io.github.bonigarcia:webdrivermanager:6.3.2'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+test {
+    useJUnit()
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+        showStandardStreams = true
+    }
+}
+
+/*
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:deprecation"
+}
+*/
