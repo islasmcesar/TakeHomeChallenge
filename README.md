@@ -50,7 +50,7 @@ Ejecutar el siguiente comando dentro de una terminal en la ruta del proyecto:
   ./gradlew clean test
 
 ## Reportes
-Despues de cada ejecucion se encontrara el reporte correspondiente en la ruta del proyecto: TakeHomeChallenge/build/reports/cucumber.html
+Despues de cada ejecucion se encontrara el reporte correspondiente en la ruta del proyecto: TakeHomeChallenge/build/reports/cucumber.html, al abrir dicho reporte en el navegador se pueden observar en la parte inferior las imagenes correspondientes a cada paso de la ejecucion.
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia [MIT] - mira el archivo LICENSE.txt para detalles.

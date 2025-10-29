@@ -54,6 +54,7 @@ public class NavigationPage extends BasePage{
         for(int i = 1;i <= 5;i++){
             byProducto = getByOptProductoPLP(i);
             byPrecio = getByOptPrecioPLP(elements.precioProducto1,i);
+            String precio;
             scrollIntoView(byProducto);
             System.out.println("\t" + driver.findElement(byProducto).getText());
             try{
@@ -62,7 +63,9 @@ public class NavigationPage extends BasePage{
                 byPrecio = getByOptPrecioPLP(elements.precioProducto2,i);
                 scrollIntoView(byPrecio);
             }
-            System.out.println("\tPrecio: $" + driver.findElement(byPrecio).getText() + "\n");
+            precio = driver.findElement(byPrecio).getText();
+            if(!Character.isDigit(precio.charAt(0))) byPrecio = getByOptPrecioPLP(precio, i);
+            System.out.println("\tPrecio: $" + precio + "\n");
         }
     }
 }
