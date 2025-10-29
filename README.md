@@ -14,7 +14,8 @@ Exercise:  
   •	Print these products in the console  
 
 ## Requisitos
-- Java (JDK 17 o superior) //En caso de no contar con Java instalado consultar la siguiente liga -> https://youtu.be/fESHGMFRsS0?si=fSEwAL6usQHK8i7a
+- Java (JDK 17 o superior). Asegurate de tener la variable de entorno JAVA_HOME correctamente instalada. En caso de no contar con Java instalado o no contar con la variable de entorno JAVA_HOME, porfavor consultar la siguiente liga -> https://www.youtube.com/watch?v=Zi3nDD7KNEg
+
 - Google Chrome
 
 ## Estructura
