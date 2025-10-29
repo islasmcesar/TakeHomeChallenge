@@ -64,7 +64,10 @@ public class NavigationPage extends BasePage{
                 scrollIntoView(byPrecio);
             }
             precio = driver.findElement(byPrecio).getText();
-            if(!Character.isDigit(precio.charAt(0))) byPrecio = getByOptPrecioPLP(precio, i);
+            if(!Character.isDigit(precio.charAt(0))){
+                byPrecio = getByOptPrecioPLP(elements.precioProducto3, i);
+                precio = driver.findElement(byPrecio).getText();
+            } 
             System.out.println("\tPrecio: $" + precio + "\n");
         }
     }
